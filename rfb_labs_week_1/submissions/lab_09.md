@@ -47,7 +47,7 @@ fee: 5.52e-5,
 
 ## Evidence references
 
-Screenshot: `evidence/lab09_coin_selection.png`
+Screenshot: `evidence/lab09.png`
 
 ## Explanation
 

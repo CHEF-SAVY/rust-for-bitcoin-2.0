@@ -24,7 +24,7 @@ transaction_is_in_block: true,
 
 ## Evidence references
 
-Screenshot: `evidence/lab06_decode.png`
+Screenshot: `evidence/lab07.png`
 
 ## Explanation
 

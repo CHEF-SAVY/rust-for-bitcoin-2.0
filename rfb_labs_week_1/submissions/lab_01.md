@@ -18,7 +18,7 @@ best_block_hash: "7147efb264c95130dee29346ed2292bd1e0a9f9b2b6308fd2abeb2847a9d2a
 
 ## Evidence references
 
-Screenshot: `evidence/lab01_network.png`
+Screenshot: `evidence/lab01.png`
 
 ## Explanation
 

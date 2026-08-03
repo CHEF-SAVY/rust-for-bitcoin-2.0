@@ -20,7 +20,7 @@ receiver owns its address: true
 
 ## Evidence references
 
-Screenshot: `evidence/lab02_wallets.png`
+Screenshot: `evidence/lab02.png`
 
 ## Explanation
 

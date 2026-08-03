@@ -24,7 +24,7 @@ reconciles with wallet balance: true
 
 ## Evidence references
 
-Screenshot: `evidence/lab04_utxos.png`
+Screenshot: `evidence/lab04.png`
 
 ## Explanation
 

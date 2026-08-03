@@ -32,7 +32,7 @@ immature: 0.0,
 
 ## Evidence references
 
-Screenshot: `evidence/lab05_mempool.png`
+Screenshot: `evidence/lab05.png`
 
 ## Explanation
 

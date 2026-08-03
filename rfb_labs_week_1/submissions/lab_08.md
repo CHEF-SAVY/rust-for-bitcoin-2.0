@@ -31,7 +31,7 @@ confirmations_after: 6,
 
 ## Evidence references
 
-Screenshot: `evidence/lab08_security.png`
+Screenshot: `evidence/lab08.png`
 
 ## Explanation
 

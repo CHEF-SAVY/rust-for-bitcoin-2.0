@@ -32,7 +32,7 @@ immature: 5000.0,
 
 ## Evidence references
 
-Screenshot: `evidence/lab03_maturity.png`
+Screenshot: `evidence/lab03.png`
 
 ## Explanation
 

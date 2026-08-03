@@ -55,7 +55,7 @@ converged: true,
 
 ## Evidence references
 
-Screenshot: `evidence/lab10_reorg.png`
+Screenshot: `evidence/lab10.png`
 
 ## Explanation
 
