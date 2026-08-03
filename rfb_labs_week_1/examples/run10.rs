@@ -1,5 +1,7 @@
 use rfb_labs_week_1::labs::lab03_maturity::mine_blocks;
-use rfb_labs_week_1::labs::lab10_reorg::{build_reorg_report, disconnect_peer, get_chain_tip, reconnect_peer};
+use rfb_labs_week_1::labs::lab10_reorg::{
+    build_reorg_report, disconnect_peer, get_chain_tip, reconnect_peer,
+};
 use rfb_labs_week_1::model::ForkSnapshot;
 use rfb_labs_week_1::rpc::{ProcessRpc, RpcClient};
 use std::thread::sleep;
@@ -8,17 +10,28 @@ use std::time::Duration;
 fn first_peer_addr<C: RpcClient>(client: &C) -> Option<String> {
     let raw = client.call(None, "getpeerinfo", &[]).ok()?;
     let value: serde_json::Value = serde_json::from_str(&raw).ok()?;
-    value.as_array()?.first()?.get("addr")?.as_str().map(ToOwned::to_owned)
+    value
+        .as_array()?
+        .first()?
+        .get("addr")?
+        .as_str()
+        .map(ToOwned::to_owned)
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let node_a = ProcessRpc::new("bitcoin-cli").with_base_args([
-        "-regtest", "-rpcconnect=127.0.0.1", "-rpcport=18443",
-        "-rpcuser=polaruser", "-rpcpassword=polarpass",
+        "-regtest",
+        "-rpcconnect=127.0.0.1",
+        "-rpcport=18443",
+        "-rpcuser=polaruser",
+        "-rpcpassword=polarpass",
     ]);
     let node_b = ProcessRpc::new("bitcoin-cli").with_base_args([
-        "-regtest", "-rpcconnect=127.0.0.1", "-rpcport=18444",
-        "-rpcuser=polaruser", "-rpcpassword=polarpass",
+        "-regtest",
+        "-rpcconnect=127.0.0.1",
+        "-rpcport=18444",
+        "-rpcuser=polaruser",
+        "-rpcpassword=polarpass",
     ]);
 
     let address = "bcrt1qgma38ugkn7lgyr0tf2k7pp5shfrn7gq8v5kgsg";
@@ -63,8 +76,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let report = build_reorg_report(
         &common_tip_before_split,
-        ForkSnapshot { node_a: tip_a, node_b: tip_b },
-        ForkSnapshot { node_a: final_a, node_b: final_b },
+        ForkSnapshot {
+            node_a: tip_a,
+            node_b: tip_b,
+        },
+        ForkSnapshot {
+            node_a: final_a,
+            node_b: final_b,
+        },
     );
     println!("\n=== Reorg report ===");
     println!("{report:#?}");
